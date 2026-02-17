@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -31,8 +31,26 @@
 </head>
 
 <body class="min-h-screen max-w-md bg-base-200 mx-auto ">
-    <h1 class="text-center text-6xl">Hello World!</h1>
-    <script src="script.js"></script>
+    <main class="flex flex-col justify-center items-center h-screen">
+        <div id="logo" class="w-50">
+            <img src="assets/Logo-full.png" alt="Payoo mfs logo">
+        </div>
+        <div id="form" class="pt-10">
+            <div class="card bg-base-100 w-full max-w-100 shrink-0 shadow">
+                <div class="card-body w-100 rounded-3xl p-8">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-medium text-base ">Mobile Number</label>
+                        <input id="input-number" type="phone" maxlength="11" minlength="11" class="input rounded-full w-full px-5 p-4 bg-base-200" placeholder="Enter your number" required />
+                        <label class="label text-neutral font-medium text-base mt-4">4 Digit Pin</label>
+                        <input id="input-pin" type="pin" maxlength="4" minlength="4" class="input rounded-full w-full px-5 p-5 bg-base-200" placeholder="Enter 4 digit pin" required />
+
+                        <button id="login-btn" class="btn btn-primary mt-4  rounded-full">Login</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script/login.js"></script>
 </body>
 
 </html>
