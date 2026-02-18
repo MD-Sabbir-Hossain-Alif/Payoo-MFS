@@ -20,7 +20,7 @@ document.getElementById("add-money-btn")
         // step 3. get amount to current balance
         const amount = getValueFromInput('add-money-amount');
         const currentAmount = getBalance();
-        
+
         // step 4. add amount
         const newBalance = currentAmount + Number(amount);
 
@@ -28,7 +28,7 @@ document.getElementById("add-money-btn")
         const pin = getValueFromInput('add-money-pin');
         if (pin === "9898") {
             // step - 5.1: if true:: show alert & set new balance
-            alert('Add Money Succeed');
+            alert(`$${amount} Add Money Success from: ${bankAccount} Bank Acc No: ${accno}`);
             setBalance(newBalance);
         } else {
             // step - 5.2: if true:: show alert & reload page
