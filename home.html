@@ -58,7 +58,7 @@
             <p class="text-base text-neutral/50 leading-6.5">Enjoy easy and convenient financial services with us.
                 Cashout charge is low and</p>
 
-                <!-- button section -->
+            <!-- button section -->
             <div id="button-section" class="grid grid-cols-3 gap-4 mt-6">
                 <button class="btn flex-col h-full py-5 space-y-2 rounded-xl bg-[#080808]/5">
                     <img src="assets/opt-1.png" alt="">
@@ -87,8 +87,45 @@
             </div>
         </section>
 
+        <!-- add money-section -->
+        <section id="add-money" class="mb-5">
+            <h2 class="text-lg font-semibold">Add Money </h2>
+            <div id="form" class="pt-4">
+                <div class="card bg-base-100 w-full shrink-0 shadow">
+                    <div class="card-body  rounded-3xl p-6">
+                        <fieldset class="fieldset">
+                            <label class="label text-neutral font-medium text-base ">Select A Bank</label>
+                            <select id="add-money-bank" class="select rounded-full w-full bg-base-200">
+                                <option disabled selected>Select bank</option>
+                                <option value="IBBL">IBBL</option>
+                                <option value="SBL">SBL</option>
+                                <option value="DBBL">DBBL</option>
+                            </select>
+
+                            <label class="label text-neutral font-medium text-base ">Bank Account Number</label>
+                            <input id="add-money-number" type="phone" maxlength="11" minlength="11"
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
+                                placeholder="Enter 11 digit account number" />
+
+                            <label class="label text-neutral font-medium text-base ">Amount to Add</label>
+                            <input id="add-money-amount" type="number"
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
+                                placeholder="Add Amount to withdraw" />
+
+                            <label class="label text-neutral font-medium text-base">Pin Number</label>
+                            <input id="add-money-pin" type="password" maxlength="4" minlength="4"
+                                class="input rounded-full w-full px-5 p-5 bg-base-200"
+                                placeholder="Enter 4 digit pin number" />
+
+                            <button id="add-money-btn" class="btn btn-primary mt-4  rounded-full">Add Money</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- cashout-section -->
-        <section id="cashout" class="mb-5">
+        <section id="cashout" class="mb-5 hidden">
             <h2 class="text-lg font-semibold">Cash Out</h2>
             <div id="form" class="pt-4">
                 <div class="card bg-base-100 w-full shrink-0 shadow">
@@ -96,10 +133,11 @@
                         <fieldset class="fieldset">
                             <label class="label text-neutral font-medium text-base ">Agent Number</label>
                             <input id="cashout-number" type="phone" maxlength="11" minlength="11"
-                                class="input rounded-full w-full px-5 p-4 bg-base-200" 
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
                                 placeholder="Enter 11 digit number" />
                             <label class="label text-neutral font-medium text-base ">Amount</label>
-                            <input id="cashout-amount" type="number" class="input rounded-full w-full px-5 p-4 bg-base-200"
+                            <input id="cashout-amount" type="number"
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
                                 placeholder="Enter amount to withdraw" />
                             <label class="label text-neutral font-medium text-base">Pin Number</label>
                             <input id="cashout-pin" type="password" maxlength="4" minlength="4"
@@ -113,6 +151,8 @@
             </div>
         </section>
     </main>
+
+    <script src="script/machine.js"></script>
     <script src="script/cashout.js"></script>
 </body>
 
