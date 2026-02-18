@@ -60,15 +60,17 @@
 
             <!-- button section -->
             <div id="button-section" class="grid grid-cols-3 gap-4 mt-6">
-                <button class="btn flex-col h-full py-5 space-y-2 rounded-xl hover:bg-blue-100 focus:border-blue-500">
+                <button onclick="showOnly('add-money')"
+                    class="btn flex-col h-full py-5 space-y-2 rounded-xl hover:bg-blue-100 focus:border-blue-500">
                     <img src="assets/opt-1.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal">Add Money</p>
                 </button>
-                <button class="btn flex-col h-full py-5 space-y-2 rounded-xl  hover:bg-blue-100 focus:border-blue-500">
+                <button onclick="showOnly('cashout')"
+                    class="btn flex-col h-full py-5 space-y-2 rounded-xl  hover:bg-blue-100 focus:border-blue-500">
                     <img src="assets/opt-2.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal">Cashout</p>
                 </button>
-                <button
+                <button onclick="showOnly('transfer-money')"
                     class="btn flex-col h-full py-5 px-3 space-y-2 rounded-xl  hover:bg-blue-100 focus:border-blue-500">
                     <img src="assets/opt-3.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal">Transfer Money</p>
@@ -89,7 +91,7 @@
         </section>
 
         <!-- add money-section -->
-        <section id="add-money" class="mb-5">
+        <section id="add-money" class="mb-5 hidden">
             <h2 class="text-lg font-semibold">Add Money </h2>
             <div id="form" class="pt-4">
                 <div class="card bg-base-100 w-full shrink-0 shadow">
@@ -151,6 +153,100 @@
                 </div>
             </div>
         </section>
+
+        <!-- latest-payment-section -->
+        <section id="latest-payment" class="mb-5 ">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Latest Payment</h2>
+                <h3 class="text-neutral/70 text-sm cursor-pointer">View All</h3>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
+                    <div class="flex gap-2">
+                        <div class="bg-base-300 rounded-full px-3 py-2 flex justify-center items-center">
+                            <img src="assets/opt-1.png" alt="">
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-neutral/70 font-semibold">Electricity Bill</h3>
+                            <p class="text-xs text-neutral/70 font-normal">Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
+                    <div class="flex gap-2">
+                        <div class="bg-base-300 rounded-full px-3 py-2 flex justify-center items-center">
+                            <img src="assets/opt-1.png" alt="">
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-neutral/70 font-semibold">Bank Deposit</h3>
+                            <p class="text-xs text-neutral/70 font-normal">Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
+                    <div class="flex gap-2">
+                        <div class="bg-base-300 rounded-full px-3 py-2 flex justify-center items-center">
+                            <img src="assets/opt-1.png" alt="">
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-neutral/70 font-semibold">Mobile Recharge</h3>
+                            <p class="text-xs text-neutral/70 font-normal">Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
+                    <div class="flex gap-2">
+                        <div class="bg-base-300 rounded-full px-3 py-2 flex justify-center items-center">
+                            <img src="assets/opt-1.png" alt="">
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-neutral/70 font-semibold">Gas Bill</h3>
+                            <p class="text-xs text-neutral/70 font-normal">Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- transfer-money-section -->
+        <section id="transfer-money" class="mb-5 hidden">
+            <h2 class="text-lg font-semibold">Transfer Money</h2>
+            <div id="form" class="pt-4">
+                <div class="card bg-base-100 w-full shrink-0 shadow">
+                    <div class="card-body  rounded-3xl p-6">
+                        <fieldset class="fieldset">
+                            <label class="label text-neutral font-medium text-base ">User Account Number</label>
+                            <input id="cashout-number" type="phone" maxlength="11" minlength="11"
+                                class="input rounded-full w-full px-5 p-4 bg-base-200" placeholder="Enter 11 digit number" />
+                            <label class="label text-neutral font-medium text-base ">Amount</label>
+                            <input id="cashout-amount" type="number" class="input rounded-full w-full px-5 p-4 bg-base-200"
+                                placeholder="Enter amount to withdraw" />
+                            <label class="label text-neutral font-medium text-base">Pin Number</label>
+                            <input id="cashout-pin" type="password" maxlength="4" minlength="4"
+                                class="input rounded-full w-full px-5 p-5 bg-base-200" placeholder="Enter 4 digit pin number" />
+        
+                            <button id="cashout-btn" class="btn btn-primary mt-4  rounded-full">Withdraw Money</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <script src="script/machine.js"></script>

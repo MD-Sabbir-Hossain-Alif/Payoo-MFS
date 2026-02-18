@@ -19,3 +19,20 @@ function getBalance() {
 function setBalance(value) {
     document.getElementById("balance").innerText = value;
 }
+
+// 4. hide all and show id
+
+const addMoney = document.getElementById('add-money');
+const cashout = document.getElementById('cashout');
+const latest = document.getElementById('latest-payment');
+
+function showOnly(id) {
+    // hide all
+    latest.classList.add('hidden')
+    addMoney.classList.add('hidden');
+    cashout.classList.add('hidden');
+
+    // show only id
+    const selected = document.getElementById(id);
+    selected.classList.remove('hidden')
+}

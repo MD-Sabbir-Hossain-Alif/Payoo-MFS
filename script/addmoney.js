@@ -28,7 +28,7 @@ document.getElementById("add-money-btn")
         const pin = getValueFromInput('add-money-pin');
         if (pin === "9898") {
             // step - 5.1: if true:: show alert & set new balance
-            alert(`$${amount} Add Money Success from: ${bankAccount} Bank Acc No: ${accno}`);
+            alert(`$${amount} Add Money Success from: ${bankAccount} Bank Acc No: ${accno} at ${new Date()}`);
             setBalance(newBalance);
         } else {
             // step - 5.2: if true:: show alert & reload page
