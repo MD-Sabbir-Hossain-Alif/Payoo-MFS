@@ -35,8 +35,5 @@ document.getElementById("cashout-btn")
         } else {
             // step-5.2: else false:: show alert error reload
             alert("Invalid PIN !");
-            setTimeout(() => {
-                window.location.reload();
-            }, 100);
         }
     })

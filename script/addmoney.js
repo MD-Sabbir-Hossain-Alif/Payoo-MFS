@@ -33,8 +33,5 @@ document.getElementById("add-money-btn")
         } else {
             // step - 5.2: if true:: show alert & reload page
             alert('Invalid Pin!')
-            setTimeout(() => {
-                window.location.reload();
-            }, 100);
         }
     })

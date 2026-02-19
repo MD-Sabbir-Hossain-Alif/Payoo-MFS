@@ -22,15 +22,18 @@ function setBalance(value) {
 
 // 4. hide all and show id
 
+const latest = document.getElementById('latest-payment');
 const addMoney = document.getElementById('add-money');
 const cashout = document.getElementById('cashout');
-const latest = document.getElementById('latest-payment');
+const transferMoney = document.getElementById('transfer-money');
+const getBonus = document.getElementById('get-bonus');
 
 function showOnly(id) {
     // hide all
     latest.classList.add('hidden')
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
+    getBonus.classList.add('hidden')
 
     // show only id
     const selected = document.getElementById(id);
