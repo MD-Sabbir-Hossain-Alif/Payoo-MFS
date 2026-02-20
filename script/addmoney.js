@@ -31,7 +31,8 @@ document.getElementById("add-money-btn")
             alert(`$${amount} Add Money Success from: ${bankAccount} Bank Acc No: ${accno} at ${new Date()}`);
             setBalance(newBalance);
         } else {
-            // step - 5.2: if true:: show alert & reload page
-            alert('Invalid Pin!')
+            // step - 5.2: if false:: show alert & retrun
+            alert('Invalid Pin!');
+            return
         }
     })

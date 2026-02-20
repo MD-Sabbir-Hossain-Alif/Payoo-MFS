@@ -33,7 +33,8 @@ document.getElementById("transfer-btn")
             alert(`Transfer Successful: $${transferAmount}`);
             setBalance(newBalance);
         } else {
-            // step-5.2: else false:: show alert error reload
+            // step-5.2: else false:: show alert error return
             alert("Invalid PIN !");
+            return
         }
     })

@@ -15,7 +15,7 @@ document.getElementById("get-bonus-btn")
             alert(`Congratulation! You Get Bonus $${500}`);
             setBalance(newBalance);
         } else {
-            // step - 1.2: if true:: show alert & reload page
+            // step - 1.2: if false:: show alert & return page
             alert('Invalid Coupon!')
             return;
         }

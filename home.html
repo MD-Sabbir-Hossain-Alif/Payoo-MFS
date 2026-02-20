@@ -79,11 +79,11 @@
                     <img src="assets/opt-4.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal">Get Bonus</p>
                 </button>
-                <button class="btn flex-col h-full py-5 space-y-2 rounded-xl hover:bg-blue-100 focus:border-blue-500">
+                <button onclick="showOnly('pay-bill')" class="btn flex-col h-full py-5 space-y-2 rounded-xl hover:bg-blue-100 focus:border-blue-500">
                     <img src="assets/opt-5.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal">Pay Bill</p>
                 </button>
-                <button class="btn flex-col h-full py-5 space-y-2 rounded-xl hover:bg-blue-100 focus:border-blue-500">
+                <button onclick="showOnly('transactions')" class="btn flex-col h-full py-5 space-y-2 rounded-xl hover:bg-blue-100 focus:border-blue-500">
                     <img src="assets/opt-6.png" alt="">
                     <p class="text-sm text-neutral/70 font-normal">Transactions</p>
                 </button>
@@ -91,7 +91,7 @@
         </section>
 
         <!-- latest-payment-section -->
-        <section id="latest-payment" class="mb-5 ">
+        <section id="latest-payment" class="mb-5">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-lg font-semibold">Latest Payment</h2>
                 <h3 class="text-neutral/70 text-sm cursor-pointer">View All</h3>
@@ -267,6 +267,65 @@
             </div>
         </section>
 
+        <!-- pay-bill-section -->
+        <section id="pay-bill" class="mb-5 hidden">
+            <h2 class="text-lg font-semibold">Pay Bill</h2>
+            <div id="form" class="pt-4">
+                <div class="card bg-base-100 w-full shrink-0 shadow">
+                    <div class="card-body  rounded-3xl p-6">
+                        <fieldset class="fieldset">
+                            <label class="label text-neutral font-medium text-base ">Select To Pay</label>
+                            <select id="pay-bill-provider" class="select rounded-full w-full bg-base-200">
+                                <option disabled selected>Select to pay</option>
+                                <option value="Wifi">Wifi</option>
+                                <option value="Electricity">Electricity</option>
+                                <option value="GAS">GAS</option>
+                            </select>
+        
+                            <label class="label text-neutral font-medium text-base ">Biller Account Number</label>
+                            <input id="pay-bill-number" value="01300000000" type="phone" maxlength="11" minlength="11"
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
+                                placeholder="Enter 11 digit account number" />
+        
+                            <label class="label text-neutral font-medium text-base ">Amount to Pay</label>
+                            <input id="pay-bill-amount" type="number" class="input rounded-full w-full px-5 p-4 bg-base-200"
+                                placeholder="Add Amount to pay" />
+        
+                            <label class="label text-neutral font-medium text-base">Pin Number</label>
+                            <input id="pay-bill-pin" type="password" maxlength="4" minlength="4"
+                                class="input rounded-full w-full px-5 p-5 bg-base-200" placeholder="Enter 4 digit pin number" />
+        
+                            <button id="pay-bill-btn" class="btn btn-primary mt-4  rounded-full">Pay Now</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- transactions-section -->
+        <section id="transactions" class="mb-5 hidden">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Transactions</h2>
+                <h3 class="text-neutral/70 text-sm cursor-pointer">View All</h3>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
+                    <div class="flex gap-2">
+                        <div class="bg-base-300 rounded-full px-3 py-2 flex justify-center items-center">
+                            <img src="assets/opt-1.png" alt="">
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-neutral/70 font-semibold">Electricity Bill</h3>
+                            <p class="text-xs text-neutral/70 font-normal">Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="script/machine.js"></script>
@@ -274,6 +333,7 @@
     <script src="script/cashout.js"></script>
     <script src="script/transfermoney.js"></script>
     <script src="script/getbonus.js"></script>
+    <script src="script/paybill.js"></script>
 </body>
 
 </html>
