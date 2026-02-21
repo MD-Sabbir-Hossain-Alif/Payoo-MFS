@@ -44,3 +44,28 @@ function showOnly(id) {
     const selected = document.getElementById(id);
     selected.classList.remove('hidden')
 }
+
+document.getElementById("button-section")
+    .addEventListener('click', function(event){
+        
+        const clickedBtn = event.target.closest(".btn");
+        if (!clickedBtn) return;
+
+        const allBtns = this.querySelectorAll(".btn");
+
+        // Reset all buttons
+        allBtns.forEach(btn => {
+            btn.classList.remove("bg-blue-100", "border-blue-500");
+
+            const p = btn.querySelector("p");
+            p.classList.remove("text-blue-500");
+            p.classList.add("text-neutral/70");
+        });
+
+        // Activate clicked button
+        clickedBtn.classList.add("bg-blue-100", "border-blue-500");
+
+        const clickedP = clickedBtn.querySelector("p");
+        clickedP.classList.remove("text-neutral/70");
+        clickedP.classList.add("text-blue-500");
+    })
