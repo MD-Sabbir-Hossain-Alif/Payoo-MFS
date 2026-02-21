@@ -239,7 +239,7 @@
                             <label class="label text-neutral font-medium text-base ">Amount</label>
                             <input id="transfer-amount" type="number"
                                 class="input rounded-full w-full px-5 p-4 bg-base-200"
-                                placeholder="Enter amount to withdraw" />
+                                placeholder="Enter amount to transfer" />
                             <label class="label text-neutral font-medium text-base">Pin Number</label>
                             <input id="transfer-pin" type="password" maxlength="4" minlength="4"
                                 class="input rounded-full w-full px-5 p-5 bg-base-200"
@@ -261,8 +261,9 @@
                         <fieldset class="fieldset">
                             <label class="label text-neutral font-medium text-base ">Enter Bonus Coupon</label>
                             <input id="get-bonus-coupon" value="PAY-H4O8" type="text" maxlength="8" minlength="8"
-                                class="input rounded-full w-full px-5 p-4 bg-base-200" placeholder="Enter your coupon" />
-        
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
+                                placeholder="Enter your coupon" />
+
                             <button id="get-bonus-btn" class="btn btn-primary mt-4  rounded-full">Get Bonus</button>
                         </fieldset>
                     </div>
@@ -284,20 +285,22 @@
                                 <option value="Electricity">Electricity</option>
                                 <option value="GAS">GAS</option>
                             </select>
-        
+
                             <label class="label text-neutral font-medium text-base ">Biller Account Number</label>
                             <input id="pay-bill-number" value="01300000000" type="phone" maxlength="11" minlength="11"
                                 class="input rounded-full w-full px-5 p-4 bg-base-200"
                                 placeholder="Enter 11 digit account number" />
-        
+
                             <label class="label text-neutral font-medium text-base ">Amount to Pay</label>
-                            <input id="pay-bill-amount" type="number" class="input rounded-full w-full px-5 p-4 bg-base-200"
+                            <input id="pay-bill-amount" type="number"
+                                class="input rounded-full w-full px-5 p-4 bg-base-200"
                                 placeholder="Add Amount to pay" />
-        
+
                             <label class="label text-neutral font-medium text-base">Pin Number</label>
                             <input id="pay-bill-pin" type="password" maxlength="4" minlength="4"
-                                class="input rounded-full w-full px-5 p-5 bg-base-200" placeholder="Enter 4 digit pin number" />
-        
+                                class="input rounded-full w-full px-5 p-5 bg-base-200"
+                                placeholder="Enter 4 digit pin number" />
+
                             <button id="pay-bill-btn" class="btn btn-primary mt-4  rounded-full">Pay Now</button>
                         </fieldset>
                     </div>
@@ -310,22 +313,6 @@
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-lg font-semibold">Transactions</h2>
                 <h3 class="text-neutral/70 text-sm cursor-pointer">View All</h3>
-            </div>
-            <div class="space-y-4">
-                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
-                    <div class="flex gap-2">
-                        <div class="bg-base-300 rounded-full px-3 py-2 flex justify-center items-center">
-                            <img src="assets/opt-1.png" alt="">
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-neutral/70 font-semibold">Electricity Bill</h3>
-                            <p class="text-xs text-neutral/70 font-normal">Today 01:44 AM</p>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
-                    </div>
-                </div>
             </div>
         </section>
 

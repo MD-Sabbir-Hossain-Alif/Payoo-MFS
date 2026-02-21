@@ -30,6 +30,34 @@ document.getElementById("pay-bill-btn")
             // step - 5.1: if true:: show alert & set new balance
             alert(`Payment of $${amount} successful from ${payBillAccount} Biller (Acc: ${accno}) on ${new Date()}`);
             setBalance(newBalance);
+
+            // history container ke dhora niya asbo
+            const history = document.getElementById("transactions")
+            // new div create korbo
+            const newHistory = document.createElement("div");
+
+            // new div inner html create korbo
+            newHistory.innerHTML = `
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl px-4 py-3.5 flex justify-between items-center">
+                    <div class="flex gap-2 justify-center items-center">
+                        <div class="bg-base-300 rounded-full px-4 py-4 flex justify-center items-center">
+                            <img src="assets/opt-5.png" alt="">
+                        </div>
+                        <div class="">
+                            <h3 class="text-neutral/70 font-semibold"> ${payBillAccount} Bill — $${amount} Paid</h3>
+                            <p class="text-xs text-neutral/70 font-normal">${new Date()}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis text-neutral/70 rotate-90"></i>
+                    </div>
+                </div>
+            </div>
+            `
+            console.log(newHistory);
+            // history container a new div append korbo
+            history.append(newHistory);
         } else {
             // step - 5.2: if false:: show alert & return
             alert('Invalid Pin!');
